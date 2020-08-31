@@ -1,0 +1,324 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.container {
+	text-align: center;
+	margin: auto 12%;
+}
+
+/* Header */
+
+.navpanel {
+    display: flex;
+    position: sticky;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #4d99a4;
+    padding: 15px 0;
+
+    top: 0;
+    z-index: 10;
+}
+
+.nav__logo {
+    font-family: 'Cherry Swash', cursive;
+    font-weight: 400;
+    font-size: 40px;
+    color: #FFFFFF;
+}
+
+.nav__menu {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.nav__link {
+    position: relative;
+    color:#DCE3E4;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 0 15px;
+}
+
+.nav__link:hover {
+	color: #69728C;
+}
+
+.nav__menu a+a::after {
+	content: '';
+	position: absolute;
+    display: flex;
+    justify-content: space-around;
+	width: 18px;
+	height: 2px;
+	transform: rotate(-60deg);
+    background: #DCE3E4;
+
+    top: 10px;
+	left: -25px;
+}
+
+.slide {
+    display: flex;
+    background: url(../img/background/ocean.jpeg) no-repeat center center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slide__text {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 44px;
+    color: #E4E4E4;
+
+    margin-top: 117px;
+}
+
+.slide__btn {
+    /* cursor: pointer;  Почему он не срабатывает? */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    border-radius: 6px;
+    background: transparent;
+    color: #E4E4E4;
+    border: 2px solid #E4E4E4;
+
+    margin: 40px;
+    padding: 7px 45px;
+}
+
+.slide__btn:hover {
+	background: transparent;
+	color: #69728C;
+    border-color: #69728C;
+}
+
+.slide__menu {
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    margin-right: 25px;
+}
+
+.slide__circle {
+	width: 9px;
+	height: 9px;
+	background: #fff;
+	border-radius: 50%;
+	margin: 0 8px;
+}
+
+.slide__circle:hover {
+	background: #69728C;
+}
+
+/* Header --возникли проблемы с кружками, вроде как позиция по центру стоит, 
+но выглядят на глаз чуть правее , чем текст и кнопка, пришлось ровнять марджином.
+Так же, хотел бы узнать, как правильно(красивый код) ставить - "/" между словами. */
+
+
+/* ---Main content ---------------------------------------------------------------------*/
+
+/* quote */
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main__title {
+    font-family: 'Montserrat', sans-serif;
+    color: #4C505D;
+    font-size: 30px;
+    font-weight: 300;
+
+    padding-top: 100px;
+    margin-bottom: 39px;
+}
+
+.main__text {
+    color: #4C505D;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.main__icon {
+    display: flex;
+    justify-content: space-evenly;
+
+    margin: 100px 10% 5% 10%;
+}
+
+.quote {
+    background-color: #00d089;
+}
+
+.quote__logo {
+    display: flex;
+    justify-content: center;
+	align-items: center;
+}
+
+.quote__photo {
+	width: 150px;
+	height: 150px;
+    border-radius: 50%;
+    
+	margin: 10% 0 5% 5%;
+}
+
+.man {
+	background: url("../img/icon/human.png") no-repeat center center;
+}
+
+.quote__thinks {
+    padding-left: 30px;
+    padding-top: 50px;
+    font-size: 0;
+}
+
+.quote__name {
+    color: #E4E4E4;
+    font-size: 26px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.quote__quotes {
+    font-size: 80px;
+	color: #fff;
+    opacity: .5;
+}
+
+
+.quote__about {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #FFFFFF;
+
+    margin-bottom: 80px;
+}
+/* quote */
+/* ------------------------------------------------------ */
+/* data */
+
+.data {
+    background: url(../img/background/map.jpeg) no-repeat center center;
+    background-size: cover;
+    padding: 54px 425px 34px 425px;
+}
+/* где ошибка? изначально фон только по квадрату в центре а по краям обрезан, падингов растянул и он появился , не понял ничего */
+
+.data__circle {
+	display: flex;
+    justify-content: center;
+    width: 431px;
+    height: 431px;
+	background: #fff;
+	opacity: .8;
+	border-radius: 50%
+}
+
+.data__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.data__name {
+    width: 276px;
+	height: 32px;
+	margin-top: 100px;
+	margin-bottom: 14px;
+}
+
+.data__email {
+    width: 276px;
+	height: 32px;
+	margin-bottom: 15px;
+}
+
+.data__message {
+    width: 276px;
+	height: 81px;
+	margin-bottom: 32px;
+}
+
+.data__button {
+    position: relative;
+	width: 67px;
+	height: 67px;
+	background: #00D089;
+	border-radius: 50%;
+	margin: 0 auto;
+	border: #00D089;
+}
+
+.check-sign {
+	position: absolute;
+    background: #fff;
+}
+
+.check {
+    width: 20px;
+    height: 10px;    
+	transform: rotate(40deg);
+	left: 17px;
+    top: 35px;	
+}
+
+.part {
+    width: 35px;
+    height: 10px;    
+    transform: rotate(-50deg);
+    left: 22px;
+    top: 29px;
+}
+
+.data__button:hover {
+	position: relative;
+	width: 67px;
+	height: 67px;
+	background: #000;
+	border-radius: 50%;
+	margin: 0 auto;
+	border: #000;
+}
+/* Data */
+
+/* -------------------- */
+
+/* Footer
+=======================================*/
+
+.footer {
+	text-align: center;
+	padding-top: 14px;
+	padding-bottom: 16px;
+	background: #00D089;
+}
+
+.footer__text {
+	text-transform: uppercase;
+	font-size: 14px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}

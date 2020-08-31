@@ -1,0 +1,91 @@
+@media 
+	(max-width: 768px) {
+		
+/* Nav
+========================================================*/	
+		
+		.container {
+			text-align: center;
+			margin: auto 6%;
+		}
+		
+		.nav__menu {
+			position: relative;
+			width: 30px;
+			height: 3px;
+			background-color: darkred;
+		}
+
+		.nav__menu:after {
+			content: '';
+			position: absolute;
+			top: 6px;
+			left: 0px;
+			width: 30px;
+			height: 3px;
+			background: darkred;
+		}
+
+		.nav__menu:before {
+			content: '';
+			position: absolute;
+			top: -6px;
+			left: 0px;
+			width: 30px;
+			height: 3px;
+			background: darkred;
+		}
+		
+		.nav__link {
+			display: none;
+		}
+
+/* Quote
+========================================================*/
+		
+		.quote__photo {
+			width: 30vw;
+			height: 30vw;
+			border-radius: 50%;
+			margin-bottom: 62px;
+		}
+		
+}
+
+@media
+	(max-width: 676px) {
+		
+/* Data
+========================================================*/
+		
+		.data__circle {
+			margin: 0 auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 90vw;
+			height: 90vw;
+			background: #fff;
+			opacity: .8;
+			border-radius: 50%
+		}
+		
+		.data__name {
+			width: 65vw;
+			height: 6vw;
+			margin-top: 10vw;
+			margin-bottom: 10px;
+		}
+
+		.data__email {
+			width: 65vw;
+			height: 6vw;
+			margin-bottom: 10px;
+		}
+
+		.data__message {
+			width: 65vw;
+			height: 12vw;
+			margin-bottom: 20px;
+		}
+}
